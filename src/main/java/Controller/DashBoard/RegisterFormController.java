@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.jasypt.util.text.BasicTextEncryptor;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -27,21 +28,30 @@ public class RegisterFormController {
 
     @FXML
     void btnRegisterFormAction(ActionEvent event) throws SQLException {
+        String key ="12345";
 
-        if(txtemail.getText().equals(txtConformePassword.getText())){
+        BasicTextEncryptor basicTextEncryptor = new BasicTextEncryptor();
+        basicTextEncryptor.setPassword(key);
+
+        if (txtPassword.getText().equals(txtConformePassword.getText())){
+            System.out.println(true);
             Connection connection = DBConnection.getInstance().getConnection();
-            ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM users WHERE email="+"'"+txtemail.getText()+ "'");
-            if (!resultSet.next()) {
-                String sql = "INSERT INTO users(username,email,password) VALUES (?,?,?)";
-                PreparedStatement pstm = connection.prepareStatement(sql);
-                pstm.setObject(1, txtname.getText());
-                pstm.setObject(2, txtemail.getText());
-                pstm.setObject(3, txtPassword.getText());
-                pstm.executeUpdate();
-            }else{
+            ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM users WHERE email=" + "'" + txtemail.getText() + "'");
+            if (!resultSet.next()){
                 System.out.println(false);
+
+                String SQL = "INSERT INTO users (username,email,password) VALUES (?,?,?)";
+                PreparedStatement psTm = connection.prepareStatement(SQL);
+                psTm.setString(1,txtname.getText());
+                psTm.setString(2,txtemail.getText());
+                psTm.setString(3,basicTextEncryptor.encrypt(txtPassword.getText()));
+                psTm.executeUpdate();
+
+            }else{
+                System.out.println(true);
             }
-         }else{
+
+        }else {
             System.out.println(false);
         }
     }

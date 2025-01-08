@@ -18,7 +18,7 @@ public class DashboardFormController {
     }
 
     public void btnCustomerFormOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = this.getClass().getResource("../view/viewcustomer_form_controller.fxml");
+        URL resource = this.getClass().getResource("/view/viewcustomer_form_controller.fxml");
 
         assert resource!=null;
         Parent lode = FXMLLoader.load(resource);
