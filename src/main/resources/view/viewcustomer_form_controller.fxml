@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Customer.ViewCustomerFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#072f55" height="59.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Label layoutX="151.0" layoutY="4.0" prefHeight="49.0" prefWidth="322.0" text="ViewCustomer Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomer" layoutX="23.0" layoutY="214.0" prefHeight="172.0" prefWidth="553.0">
+        <columns>
+          <TableColumn fx:id="clmId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="clmName" prefWidth="170.00003051757812" text="Name" />
+            <TableColumn fx:id="clmAddress" prefWidth="150.0" text="Address" />
+            <TableColumn fx:id="clmSalary" prefWidth="157.3333740234375" text="Salary" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtId" layoutX="70.0" layoutY="65.0" prefHeight="25.0" prefWidth="161.0" promptText="Id" />
+      <TextField fx:id="txtAddress" layoutX="70.0" layoutY="131.0" prefHeight="25.0" prefWidth="161.0" promptText="Address" />
+      <TextField fx:id="txtName" layoutX="70.0" layoutY="97.0" prefHeight="25.0" prefWidth="161.0" promptText="Name" />
+      <TextField fx:id="txtSalary" layoutX="70.0" layoutY="165.0" prefHeight="25.0" prefWidth="161.0" promptText="Salary" />
+      <JFXButton layoutX="363.0" layoutY="77.0" onAction="#btnAddCustomerOnAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #0097e6;" text="Add Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="363.0" layoutY="109.0" onAction="#btnUpdateCustomerOnAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #44bd32;" text="UpdateCustomer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="363.0" layoutY="143.0" onAction="#btnSearchCustomerOnAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #8c7ae6;" text="Search Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="363.0" layoutY="177.0" onAction="#btnDeleteCustomerOnAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #c23616;" text="Delete Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

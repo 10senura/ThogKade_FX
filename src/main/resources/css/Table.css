@@ -1,0 +1,58 @@
+#mainPane{
+    -fx-background-color: white;
+}
+
+.btn{
+    -fx-background-color: #0147d4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.textPane{
+    -fx-background-color: white;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-radius: 15px;
+}
+.textField{
+    -fx-background-color: white;
+    -fx-prompt-text-fill: #726d6d;
+}
+.textLabel{
+    -fx-background-color: white;
+    -fx-padding: 0 5px 0px 5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(76, 73, 73, 0.83);;
+}
+.table-view:focused{
+    -fx-background-insets: 0px;
+}
+
+.table-view .column-header{
+    -fx-size:40px;
+    -fx-background-color: #192a56;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+}
+
+.table-view .table-row-cell:empty{
+    -fx-background-color: white;
+}
+.table-view .table-row-cell:selected{
+    -fx-background-color:linear-gradient(to right, rgba(119, 8, 245, 0.29), rgba(15, 93, 255, 0.39));
+}
+
+.table-view .table-row-cell:selected *{
+    -fx-font-weight: bold;
+    -fx-text-fill: rgb(54, 49, 49);
+}
+
+.actionIcon{
+    -fx-cursor: hand;
+    -fx-text-fill: red;
+}
+
+.dashboard-colour2 {
+    -fx-background-color: linear-gradient(to bottom left, #A868A0, #2D75E8);
+}

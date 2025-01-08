@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="365.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashBoard.LoginFormController">
+   <children>
+      <ImageView fitHeight="384.0" fitWidth="610.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Purple%20Simple%20Login%20Website%20Application%20Desktop%20Prototype.png" />
+         </image></ImageView>
+      <PasswordField fx:id="txtPassword" layoutX="39.0" layoutY="191.0" prefHeight="27.0" prefWidth="179.0" promptText="password" />
+      <TextField fx:id="txtEmail" layoutX="39.0" layoutY="125.0" prefHeight="27.0" prefWidth="179.0" promptText="email" />
+      <JFXButton layoutX="52.0" layoutY="247.0" onAction="#btnLoginOnAction" prefHeight="29.0" prefWidth="153.0" style="-fx-background-color: #502779;" text="LogIn" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="52.0" layoutY="290.0" onAction="#btnSinginOnAction" prefHeight="29.0" prefWidth="153.0" style="-fx-background-color: #f9aad0;" text="Singin" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="39.0" layoutY="99.0" text="Email" textFill="WHITE" />
+      <Label layoutX="39.0" layoutY="164.0" text="Password" textFill="WHITE" />
+      <Label layoutX="68.0" layoutY="48.0" prefHeight="36.0" prefWidth="126.0" text="Login Page" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="75.0" text="Welcome to my App" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
