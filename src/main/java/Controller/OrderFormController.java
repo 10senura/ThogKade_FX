@@ -9,19 +9,22 @@ import javafx.scene.control.TextField;
 public class OrderFormController {
 
     @FXML
-    private TableColumn<?, ?> clmAddress;
+    private TableColumn<?, ?> clmCustname;
 
     @FXML
-    private TableColumn<?, ?> clmId;
+    private TableColumn<?, ?> clmDescription;
 
     @FXML
-    private TableColumn<?, ?> clmName;
+    private TableColumn<?, ?> clmHandOnStock;
 
     @FXML
-    private TableColumn<?, ?> clmSalary;
+    private TableColumn<?, ?> clmOrderName;
 
     @FXML
-    private TableColumn<?, ?> clmSalary2;
+    private TableColumn<?, ?> clmQty;
+
+    @FXML
+    private TableColumn<?, ?> clmclmStockSalary2;
 
     @FXML
     private TableView<?> tblCustomer;
@@ -45,7 +48,7 @@ public class OrderFormController {
     private TextField txtSalary;
 
     @FXML
-    void btnAddCustomerOnAction(ActionEvent event) {
+    void btnPlaceOrderAction(ActionEvent event) {
 
     }
 

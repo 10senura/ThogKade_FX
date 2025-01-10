@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controller.OrderFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OrderFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#072f55" height="59.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="609.0" />
+      <Label layoutX="171.0" layoutY="5.0" prefHeight="49.0" prefWidth="322.0" text="View Order Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomer" layoutX="15.0" layoutY="214.0" prefHeight="172.0" prefWidth="580.0">
+         <columns>
+            <TableColumn fx:id="clmCustname" prefWidth="75.0" text="CustName" />
+            <TableColumn fx:id="clmOrderName" prefWidth="83.99999237060547" text="OrderName" />
+            <TableColumn fx:id="clmDescription" prefWidth="99.99998474121094" text="Decsription" />
+            <TableColumn fx:id="clmHandOnStock" minWidth="0.0" prefWidth="122.0" text="HandOnStock" />
+            <TableColumn fx:id="clmclmStockSalary2" prefWidth="97.33331298828125" text="stock" />
+            <TableColumn fx:id="clmQty" prefWidth="97.33331298828125" text="qty" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtId" layoutX="179.0" layoutY="140.0" prefHeight="25.0" prefWidth="113.0" promptText="Decstription" />
+      <TextField fx:id="txtAddress" layoutX="416.0" layoutY="140.0" prefHeight="25.0" prefWidth="85.0" promptText="Stock" />
+      <TextField fx:id="txtName" layoutX="179.0" layoutY="96.0" prefHeight="25.0" prefWidth="161.0" promptText="Customer Name" />
+      <TextField fx:id="txtSalary" layoutX="524.0" layoutY="140.0" prefHeight="25.0" prefWidth="54.0" promptText="Qty" />
+      <JFXButton layoutX="435.0" layoutY="174.0" onAction="#btnPlaceOrderAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #0097e6;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtId1" layoutX="378.0" layoutY="96.0" prefHeight="25.0" prefWidth="161.0" promptText="Address" />
+      <JFXComboBox layoutX="32.0" layoutY="96.0" prefHeight="25.0" prefWidth="119.0" promptText="CustomerID" />
+      <JFXComboBox layoutX="32.0" layoutY="140.0" prefHeight="25.0" prefWidth="119.0" promptText="OrderId" />
+      <TextField fx:id="txtId2" layoutX="304.0" layoutY="140.0" prefHeight="25.0" prefWidth="97.0" promptText="Hand On Stock" />
+   </children>
 </AnchorPane>
