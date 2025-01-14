@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="425.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashBoardCloneForm">
+   <children>
+      <AnchorPane fx:id="lodeFormController" prefHeight="425.0" prefWidth="663.0" style="-fx-background-color: #ffdced;">
+         <children>
+            <ImageView fitHeight="463.0" fitWidth="477.0" layoutX="111.0" layoutY="-52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/store.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="CENTER" layoutX="407.0" layoutY="112.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="     Orders" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="216.0" layoutY="112.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text=" Customers" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="311.0" layoutY="111.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="      Items" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="269.0" fitWidth="213.0" layoutX="450.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/selar%20man.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="189.0" fitWidth="157.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/shoping%20girl.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="59.0" fitWidth="65.0" layoutX="597.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/buy.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="4.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/buy%20moniter.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

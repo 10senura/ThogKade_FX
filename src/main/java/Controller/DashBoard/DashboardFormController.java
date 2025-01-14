@@ -36,14 +36,20 @@ public class DashboardFormController {
 
     }
 
-    public void btnPlaceOrderFormOnAction(ActionEvent actionEvent) {
+    public void btnPlaceOrderFormOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = this.getClass().getResource("/view/view_order_form_controller.fxml");
+
+        assert resource!=null;
+        Parent load = FXMLLoader.load(resource);
+        this.lodeFormController.getChildren().clear();
+        this.lodeFormController.getChildren().add(load);
     }
 
     public void btnLogOutOnAction(ActionEvent actionEvent) {
     }
 
     public void btnDashBoardOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = this.getClass().getResource("/view/dashboard_form_controller.fxml");
+        URL resource = this.getClass().getResource("/view/dash-board-clone.fxml");
 
         assert resource!=null;
         Parent lode = FXMLLoader.load(resource);

@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="409.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashBoard.DashboardFormController">
+<AnchorPane prefHeight="415.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashBoard.DashboardFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ad53a6" height="415.0" layoutX="-5.0" stroke="#ad53a6" strokeType="INSIDE" width="206.0" />
       <JFXButton layoutX="9.0" layoutY="193.0" onAction="#btnItemFormOnAction" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #502779;" text="Add Item " textFill="WHITE">
@@ -20,16 +20,18 @@
          <font>
             <Font name="System Bold" size="16.0" />
          </font></JFXButton>
-      <AnchorPane fx:id="lodeFormController" layoutX="201.0" prefHeight="415.0" prefWidth="619.0" style="-fx-background-color: #ffdced;">
+      <AnchorPane fx:id="lodeFormController" layoutX="200.0" prefHeight="415.0" prefWidth="684.0" style="-fx-background-color: #ffdced;">
          <children>
-            <ImageView fitHeight="463.0" fitWidth="475.0" layoutX="77.0" layoutY="-48.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="59.0" fitWidth="65.0" layoutX="619.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/store.png" />
+                  <Image url="@../img/buy.png" />
                </image>
             </ImageView>
-            <Label contentDisplay="CENTER" layoutX="373.0" layoutY="117.0" prefHeight="83.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="          " textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
-            <Label contentDisplay="CENTER" layoutX="182.0" layoutY="117.0" prefHeight="83.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="          " textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
-            <Label contentDisplay="CENTER" layoutX="277.0" layoutY="117.0" prefHeight="83.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="          " textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="22.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/buy%20moniter.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <ImageView fitHeight="132.0" fitWidth="162.0" layoutX="17.0" layoutY="-13.0" pickOnBounds="true">
@@ -52,5 +54,35 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
+      <ImageView fitHeight="463.0" fitWidth="477.0" layoutX="328.0" layoutY="-51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/store.png" />
+         </image>
+      </ImageView>
+      <Label contentDisplay="CENTER" layoutX="624.0" layoutY="114.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="   Orders" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="434.0" layoutY="115.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text=" Customers" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="528.0" layoutY="115.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="     Items" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="269.0" fitWidth="213.0" layoutX="667.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/selar%20man.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="189.0" fitWidth="157.0" layoutX="217.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/shoping%20girl.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

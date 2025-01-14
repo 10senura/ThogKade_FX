@@ -11,14 +11,14 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="626.0" style="-fx-background-color: #ffdced;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Customer.ViewCustomerFormController">
+<AnchorPane prefHeight="400.0" prefWidth="651.0" style="-fx-background-color: #ffdced;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Customer.ViewCustomerFormController">
    <children>
-      <Label layoutX="207.0" prefHeight="49.0" prefWidth="247.0" text="Customer Form" textFill="WHITE">
+      <Label layoutX="14.0" prefHeight="49.0" prefWidth="247.0" text="Customer Form" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="33.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="158.0" layoutX="186.0" layoutY="61.0" stroke="WHITE" strokeType="INSIDE" width="212.0" />
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="175.0" layoutX="186.0" layoutY="44.0" stroke="WHITE" strokeType="INSIDE" width="212.0" />
       <TableView fx:id="tblCustomer" layoutX="23.0" layoutY="228.0" prefHeight="158.0" prefWidth="593.0" style="-fx-background-image: #ffdced;" styleClass="table-row-cell" stylesheets="@../css/Table.css">
         <columns>
           <TableColumn fx:id="clmId" prefWidth="75.0" text="Id" />
@@ -27,10 +27,10 @@
             <TableColumn fx:id="clmSalary" prefWidth="195.999989827474" text="Salary" />
         </columns>
       </TableView>
-      <TextField fx:id="txtId" layoutX="207.0" layoutY="72.0" prefHeight="25.0" prefWidth="169.0" promptText="Id" />
-      <TextField fx:id="txtAddress" layoutX="207.0" layoutY="153.0" prefHeight="25.0" prefWidth="169.0" promptText="Address" />
-      <TextField fx:id="txtName" layoutX="207.0" layoutY="110.0" prefHeight="25.0" prefWidth="169.0" promptText="Name" />
-      <TextField fx:id="txtSalary" layoutX="207.0" layoutY="187.0" prefHeight="25.0" prefWidth="169.0" promptText="Salary" />
+      <TextField fx:id="txtId" layoutX="207.0" layoutY="58.0" prefHeight="25.0" prefWidth="169.0" promptText="Id" />
+      <TextField fx:id="txtAddress" layoutX="207.0" layoutY="144.0" prefHeight="25.0" prefWidth="169.0" promptText="Address" />
+      <TextField fx:id="txtName" layoutX="207.0" layoutY="101.0" prefHeight="25.0" prefWidth="169.0" promptText="Name" />
+      <TextField fx:id="txtSalary" layoutX="207.0" layoutY="186.0" prefHeight="25.0" prefWidth="169.0" promptText="Salary" />
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="145.0" layoutX="409.0" layoutY="71.0" stroke="WHITE" strokeType="INSIDE" width="212.0" />
       <JFXButton layoutX="419.0" layoutY="85.0" onAction="#btnAddCustomerOnAction" prefHeight="49.0" prefWidth="93.0" style="-fx-background-color: #0097e6;" text="Add Customer" textFill="WHITE">
          <font>

@@ -76,6 +76,7 @@ public class ItemController implements ItemService{
                 );
             }
         } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR,"ERROR"+e.getMessage()).show();
             throw new RuntimeException(e);
         }
         return null;
