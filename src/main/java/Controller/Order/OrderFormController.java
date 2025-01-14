@@ -41,6 +41,7 @@ public class OrderFormController implements Initializable {
     public Label lblTime;
     public Label lblDate;
     public JFXComboBox <String> cmbItemCode;
+    public TextField txtQty;
     @FXML
     private TableColumn<?, ?> clmCustname;
 
@@ -127,7 +128,6 @@ public class OrderFormController implements Initializable {
         Item item = ItemController.getInstance().SearchItem(itemcode);
         txtDescription.setText(item.getDescription());
         txtHandOnStock.setText(String.valueOf(item.getQtyOnHand()));
-        txtStock.setText(String.valueOf(item.getQtyOnHand()));
         txtUnitPrice.setText(String.valueOf(item.getPrice()));
 
     }
