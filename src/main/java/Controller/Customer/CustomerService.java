@@ -15,4 +15,6 @@ public interface CustomerService {
 
      ObservableList<Customer> getAll();
 
+     public ObservableList<String> getCustomerId();
+
 }

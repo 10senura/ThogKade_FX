@@ -14,5 +14,7 @@ public class Item {
     private String code;
     protected String description;
     private double price;
-    private int qtyOnHand;
+    private int QtyOnHand;
+
+
 }

@@ -1,5 +1,6 @@
 package Controller.Item;
 
+import Model.Customer;
 import Model.Item;
 import db.DBConnection;
 import javafx.collections.FXCollections;
@@ -12,6 +13,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ItemController implements ItemService{
+    private static ItemController instance;
+    private ItemController(){}
+
+    public static ItemController getInstance() {
+        return instance==null?instance=new ItemController():instance;
+    }
 
     @Override
     public boolean AddItem(Item item) {
@@ -111,5 +118,15 @@ public class ItemController implements ItemService{
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public ObservableList<String> getItemId(){
+        ObservableList<String> ItemIds = FXCollections.observableArrayList();
+        ObservableList<Item> itemObservableList = getAll();
+        itemObservableList.forEach(customer ->{
+            ItemIds.add(customer.getCode());
+        });
+        return ItemIds;
     }
 }

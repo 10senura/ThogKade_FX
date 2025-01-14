@@ -7,9 +7,9 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="425.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashBoardCloneForm">
+<AnchorPane prefHeight="416.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashBoard.DashBoardCloneForm">
    <children>
-      <AnchorPane fx:id="lodeFormController" prefHeight="425.0" prefWidth="663.0" style="-fx-background-color: #ffdced;">
+      <AnchorPane fx:id="lodeFormController" prefHeight="415.0" prefWidth="630.0" style="-fx-background-color: #ffdced;">
          <children>
             <ImageView fitHeight="463.0" fitWidth="477.0" layoutX="111.0" layoutY="-52.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -31,17 +31,17 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <ImageView fitHeight="269.0" fitWidth="213.0" layoutX="450.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="235.0" fitWidth="171.0" layoutX="457.0" layoutY="178.0" pickOnBounds="true" smooth="false">
                <image>
                   <Image url="@../img/selar%20man.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="189.0" fitWidth="157.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="189.0" fitWidth="157.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/shoping%20girl.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="59.0" fitWidth="65.0" layoutX="597.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="59.0" fitWidth="65.0" layoutX="566.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/buy.png" />
                </image>

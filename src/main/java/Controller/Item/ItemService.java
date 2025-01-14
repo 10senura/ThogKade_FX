@@ -16,4 +16,8 @@ public interface ItemService {
 
     ObservableList<Item> getAll();
 
-}
+    public ObservableList<String> getItemId();
+
+
+
+    }

@@ -45,7 +45,7 @@ public class ItemFormController implements Initializable {
     @FXML
     private TextField txtQty;
 
-    ItemService Service= new ItemController();
+    ItemService Service= ItemController.getInstance();
 
     @FXML
     void btnAddItemOnAction(ActionEvent event) {
@@ -54,6 +54,7 @@ public class ItemFormController implements Initializable {
                 txtDescription.getText(),
                 Double.parseDouble(txtPrice.getText()),
                 Integer.parseInt(txtQty.getText())
+
         );
 
         if(Service.AddItem(item)){

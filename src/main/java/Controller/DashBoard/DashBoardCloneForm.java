@@ -1,4 +1,4 @@
-package Controller;
+package Controller.DashBoard;
 
 public class DashBoardCloneForm {
 }

@@ -13,6 +13,14 @@ import java.sql.SQLException;
 
 public class CustomerController implements CustomerService {
 
+   private static CustomerController instance;
+
+    private CustomerController(){}
+
+    public static CustomerController getInstance() {
+        return instance==null?instance= new  CustomerController():instance;
+    }
+
     @Override
     public boolean AddCustomer(Customer customer) {
         try {
@@ -110,5 +118,14 @@ public class CustomerController implements CustomerService {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+    @Override
+    public ObservableList<String> getCustomerId(){
+        ObservableList<String> customerIds = FXCollections.observableArrayList();
+        ObservableList<Customer> customerObservableList = getAll();
+        customerObservableList.forEach(customer ->{
+                customerIds.add(customer.getId());
+    });
+    return customerIds;
     }
 }

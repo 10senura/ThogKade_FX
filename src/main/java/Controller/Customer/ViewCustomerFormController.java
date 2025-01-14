@@ -35,7 +35,7 @@ public class ViewCustomerFormController implements Initializable {
     @FXML
     private TableColumn clmName;
 
-    CustomerService Service= new CustomerController();
+    CustomerService Service= CustomerController.getInstance();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

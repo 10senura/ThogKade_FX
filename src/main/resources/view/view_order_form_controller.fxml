@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -11,37 +12,63 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="419.0" prefWidth="639.0" style="-fx-background-color: #ffdced;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OrderFormController">
+<AnchorPane prefHeight="419.0" prefWidth="639.0" style="-fx-background-color: #ffdced;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Order.OrderFormController">
    <children>
       <TableView fx:id="tblCustomer" layoutX="16.0" layoutY="257.0" prefHeight="148.0" prefWidth="610.0" stylesheets="@../css/Table.css">
          <columns>
             <TableColumn fx:id="clmCustname" prefWidth="75.0" text="CustName" />
-            <TableColumn fx:id="clmOrderName" prefWidth="119.33334350585938" text="Address" />
+            <TableColumn fx:id="clmAddress" prefWidth="119.33334350585938" text="Address" />
             <TableColumn fx:id="clmDescription" prefWidth="114.0" text="Decsription" />
             <TableColumn fx:id="clmHandOnStock" minWidth="0.0" prefWidth="117.33331298828125" text="HandOnStock" />
-            <TableColumn fx:id="clmclmStockSalary2" prefWidth="87.3333740234375" text="stock" />
-            <TableColumn fx:id="clmQty" prefWidth="108.6666259765625" text="Price" />
+            <TableColumn fx:id="clmStock" prefWidth="87.3333740234375" text="stock" />
+            <TableColumn fx:id="clmPrice" prefWidth="108.6666259765625" text="Price" />
          </columns>
       </TableView>
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="91.0" layoutX="16.0" layoutY="139.0" stroke="WHITE" strokeType="INSIDE" width="417.0" />
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="91.0" layoutX="16.0" layoutY="36.0" stroke="WHITE" strokeType="INSIDE" width="417.0" />
-      <TextField fx:id="txtId" layoutX="182.0" layoutY="151.0" prefHeight="25.0" prefWidth="131.0" promptText="Decstription" />
-      <TextField fx:id="txtAddress" layoutX="205.0" layoutY="191.0" prefHeight="25.0" prefWidth="85.0" promptText="Stock" />
+      <TextField fx:id="txtDescription" layoutX="182.0" layoutY="151.0" prefHeight="25.0" prefWidth="131.0" promptText="Decstription" />
+      <TextField fx:id="txtStock" layoutX="205.0" layoutY="191.0" prefHeight="25.0" prefWidth="85.0" promptText="Stock" />
       <TextField fx:id="txtName" layoutX="187.0" layoutY="56.0" prefHeight="25.0" prefWidth="205.0" promptText="Customer Name" />
-      <TextField fx:id="txtSalary" layoutX="314.0" layoutY="191.0" prefHeight="25.0" prefWidth="69.0" promptText="Unit Price" />
+      <TextField fx:id="txtUnitPrice" layoutX="314.0" layoutY="191.0" prefHeight="25.0" prefWidth="69.0" promptText="Unit Price" />
       <JFXButton layoutX="476.0" layoutY="216.0" onAction="#btnPlaceOrderAction" prefHeight="33.0" prefWidth="131.0" style="-fx-background-color: #502779;" text="Place Order" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <TextField fx:id="txtId1" layoutX="187.0" layoutY="94.0" prefHeight="25.0" prefWidth="205.0" promptText="Address" />
-      <JFXComboBox layoutX="34.0" layoutY="43.0" prefHeight="25.0" prefWidth="119.0" promptText="CustomerID" unFocusColor="BLACK" />
-      <JFXComboBox layoutX="34.0" layoutY="151.0" prefHeight="11.0" prefWidth="119.0" promptText="OrderId" />
-      <TextField fx:id="txtId2" layoutX="328.0" layoutY="151.0" prefHeight="25.0" prefWidth="97.0" promptText="Hand On Stock" />
+      <TextField fx:id="txtAddress" layoutX="187.0" layoutY="94.0" prefHeight="25.0" prefWidth="205.0" promptText="Address" />
+      <JFXComboBox fx:id="cmbCustId" layoutX="34.0" layoutY="43.0" prefHeight="25.0" prefWidth="119.0" promptText="CustomerID" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbItemCode" layoutX="34.0" layoutY="151.0" prefHeight="11.0" prefWidth="119.0" promptText="Item Code" />
+      <TextField fx:id="txtHandOnStock" layoutX="328.0" layoutY="151.0" prefHeight="25.0" prefWidth="97.0" promptText="Hand On Stock" />
       <ImageView fitHeight="198.0" fitWidth="205.0" layoutX="433.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/order%20manage.png" />
          </image>
       </ImageView>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#502779" height="200.0" layoutX="377.0" layoutY="-171.0" stroke="#502779" strokeType="INSIDE" width="266.0" />
+      <Label layoutX="34.0" layoutY="-1.0" text="Order Form" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="384.0" layoutY="7.0" text="Date : " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="537.0" layoutY="6.0" text="Time :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="580.0" layoutY="6.0" text="11.22" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="436.0" layoutY="5.0" text="yyyy/mm/dd" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
