@@ -28,30 +28,26 @@ public class RegisterFormController {
 
     @FXML
     void btnRegisterFormAction(ActionEvent event) throws SQLException {
-        String key ="12345";
-
+        String key = "12345";
         BasicTextEncryptor basicTextEncryptor = new BasicTextEncryptor();
         basicTextEncryptor.setPassword(key);
-
-        if (txtPassword.getText().equals(txtConformePassword.getText())){
+        if (txtPassword.getText().equals(txtConformePassword.getText())) {
             System.out.println(true);
             Connection connection = DBConnection.getInstance().getConnection();
             ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM users WHERE email=" + "'" + txtemail.getText() + "'");
-            if (!resultSet.next()){
+            if (!resultSet.next()) {
                 System.out.println(false);
 
                 String SQL = "INSERT INTO users (username,email,password) VALUES (?,?,?)";
                 PreparedStatement psTm = connection.prepareStatement(SQL);
-                psTm.setString(1,txtname.getText());
-                psTm.setString(2,txtemail.getText());
-                psTm.setString(3,basicTextEncryptor.encrypt(txtPassword.getText()));
+                psTm.setString(1, txtname.getText());
+                psTm.setString(2, txtemail.getText());
+                psTm.setString(3, basicTextEncryptor.encrypt(txtPassword.getText()));
                 psTm.executeUpdate();
-
-            }else{
+            } else {
                 System.out.println(true);
             }
-
-        }else {
+        } else {
             System.out.println(false);
         }
     }
