@@ -73,4 +73,7 @@ public class DashboardFormController implements Initializable {
         this.lodeFormController.getChildren().clear();
         this.lodeFormController.getChildren().add(lode);
     }
+
+    public void btnSettingFormOnAction(ActionEvent actionEvent) {
+    }
 }

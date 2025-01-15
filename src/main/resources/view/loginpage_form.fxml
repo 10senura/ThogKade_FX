@@ -34,7 +34,7 @@
             <Font name="Bauhaus 93" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="45.0" layoutY="75.0" text="Welcome to my App" textFill="WHITE">
+      <Label layoutX="45.0" layoutY="75.0" text="Welcome to my Store" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

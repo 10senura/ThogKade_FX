@@ -53,5 +53,10 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
+      <JFXButton layoutX="9.0" layoutY="292.0" onAction="#btnSettingFormOnAction" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #502779;" text="Setting" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

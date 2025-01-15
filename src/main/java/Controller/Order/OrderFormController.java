@@ -10,6 +10,7 @@ import db.DBConnection;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,6 +43,10 @@ public class OrderFormController implements Initializable {
     public Label lblDate;
     public JFXComboBox <String> cmbItemCode;
     public TextField txtQty;
+    public TableColumn clmItemCode;
+    public TableView  tblOrders;
+    public Label lblnettotal;
+    public TableColumn clmtotal;
     @FXML
     private TableColumn<?, ?> clmCustname;
 
@@ -68,6 +73,9 @@ public class OrderFormController implements Initializable {
 
     @FXML
     private TextField txtName;
+
+    CustomerService Service= CustomerController.getInstance();
+
 
     @FXML
     void btnPlaceOrderAction(ActionEvent event) {
@@ -106,7 +114,10 @@ public class OrderFormController implements Initializable {
             if (t1!=null){
                 SearchItem(t1);
             }
+
         });
+
+        calcNetTotal();
 
     }
 
@@ -131,5 +142,44 @@ public class OrderFormController implements Initializable {
         txtUnitPrice.setText(String.valueOf(item.getPrice()));
 
     }
+
+    ObservableList<dto.CartTM> cartTms = FXCollections.observableArrayList();
+
+    @FXML
+    void btnAddToCartOnAction(ActionEvent event) {
+
+        clmItemCode.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
+        clmDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
+        clmHandOnStock.setCellValueFactory(new PropertyValueFactory<>("handOnStock"));
+        clmQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        clmPrice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
+        clmtotal.setCellValueFactory(new PropertyValueFactory<>("total"));
+
+        String itemcode = cmbCustId.getValue();
+        String description =txtDescription.getText();
+        String handOnStock = txtHandOnStock.getText();
+        Integer qty = Integer.parseInt(txtQty.getText());
+        Double unitPrice = Double.parseDouble(txtUnitPrice.getText());
+        Double total = unitPrice*qty;
+
+        if (Integer.parseInt(txtHandOnStock.getText())<qty){
+            new Alert(Alert.AlertType.WARNING,"OutOfStock").show();
+        }else{
+            cartTms.add(new dto.CartTM(itemcode,description,handOnStock,qty,unitPrice,total));
+            calcNetTotal();
+        }
+
+        tblOrders.setItems(cartTms);
+
+    }
+
+    private void calcNetTotal(){
+        Double total=0.0;
+        for (dto.CartTM cartTM: cartTms){
+            total+=cartTM.getTotal();
+        }
+        lblnettotal.setText(total.toString()+"/=");
+    }
+
 
 }
