@@ -2,7 +2,10 @@ package Controller.Item;
 
 import Model.Customer;
 import Model.Item;
+import Model.OrderDetail;
 import javafx.collections.ObservableList;
+
+import java.util.List;
 
 public interface ItemService {
 
@@ -18,6 +21,6 @@ public interface ItemService {
 
     public ObservableList<String> getItemId();
 
+    boolean updateStock(List<OrderDetail> orderDetails);
 
-
-    }
+}

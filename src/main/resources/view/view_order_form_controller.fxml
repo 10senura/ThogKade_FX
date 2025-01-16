@@ -79,5 +79,6 @@
             <Font name="Berlin Sans FB" size="25.0" />
          </font>
       </Label>
+      <TextField fx:id="txtOrderId" layoutX="235.0" layoutY="217.0" prefHeight="30.0" prefWidth="109.0" promptText="Order ID" />
    </children>
 </AnchorPane>

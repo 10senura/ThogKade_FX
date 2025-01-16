@@ -5,6 +5,8 @@ import Controller.Customer.CustomerService;
 import Controller.Item.ItemController;
 import Model.Customer;
 import Model.Item;
+import Model.Order;
+import Model.OrderDetail;
 import com.jfoenix.controls.JFXComboBox;
 import db.DBConnection;
 import javafx.animation.Animation;
@@ -25,8 +27,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class OrderFormController implements Initializable {
@@ -47,6 +52,7 @@ public class OrderFormController implements Initializable {
     public TableView  tblOrders;
     public Label lblnettotal;
     public TableColumn clmtotal;
+    public TextField txtOrderId;
 
     @FXML
     private TableColumn<?, ?> clmDescription;
@@ -65,6 +71,15 @@ public class OrderFormController implements Initializable {
 
     @FXML
     void btnPlaceOrderAction(ActionEvent event) {
+        String orderId = txtOrderId.getText();
+        LocalDate orderDate = LocalDate.now();
+        String customerId = cmbCustId.getValue();
+
+        List<OrderDetail> orderDetails = new ArrayList<>();
+        cartTms.forEach(obj->{
+            orderDetails.add(new OrderDetail(orderId,obj.getItemCode(),obj.getQty(),0.0));
+        });
+        Order order = new Order(orderId, orderDate, customerId, orderDetails);
     }
 
     public void LodeTimeAndDate(){
