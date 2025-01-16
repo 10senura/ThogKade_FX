@@ -34,6 +34,6 @@
       <Label layoutX="49.0" layoutY="155.0" text="email" textFill="WHITE" />
       <PasswordField fx:id="txtConformePassword" layoutX="49.0" layoutY="305.0" prefHeight="27.0" prefWidth="179.0" promptText="password" />
       <Label layoutX="49.0" layoutY="278.0" text="conforme Password" textFill="WHITE" />
-      <JFXButton layoutX="215.0" layoutY="374.0" text="login" textFill="WHITE" underline="true" />
+      <JFXButton layoutX="215.0" layoutY="374.0" onAction="#btnLogInOnAction" text="login" textFill="WHITE" underline="true" />
    </children>
 </AnchorPane>

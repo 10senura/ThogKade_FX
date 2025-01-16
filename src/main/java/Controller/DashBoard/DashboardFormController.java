@@ -1,5 +1,13 @@
 package Controller.DashBoard;
 
+import javafx.animation.FadeTransition;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.util.Duration;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -48,6 +56,25 @@ public class DashboardFormController implements Initializable {
     }
 
     public void btnLogOutOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.UNDECORATED);
+
+        Label message = new Label("Bye Bye");
+        message.setStyle("-fx-font-size: 24px; -fx-text-fill: #ff0000;");
+
+        StackPane root = new StackPane(message);
+        Scene scene = new Scene(root, 200, 100);
+        stage.setScene(scene);
+        stage.show();
+
+        FadeTransition fadeTransition = new FadeTransition(Duration.seconds(3), root);
+        fadeTransition.setFromValue(1.0);
+        fadeTransition.setToValue(0.0);
+        fadeTransition.setOnFinished(e -> {
+            stage.close();
+            ((Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow()).close();
+        });
+        fadeTransition.play();
     }
 
     public void btnDashBoardOnAction(ActionEvent actionEvent) throws IOException {

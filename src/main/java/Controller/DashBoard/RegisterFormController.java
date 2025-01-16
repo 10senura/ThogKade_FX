@@ -3,10 +3,14 @@ package Controller.DashBoard;
 import db.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import org.jasypt.util.text.BasicTextEncryptor;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -49,6 +53,17 @@ public class RegisterFormController {
             }
         } else {
             System.out.println(false);
+        }
+    }
+
+    public void btnLogInOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/loginpage_form.fxml"))));
+            stage.show();
+            ((Stage) txtemail.getScene().getWindow()).close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }
