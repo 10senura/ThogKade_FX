@@ -16,12 +16,11 @@
    <children>
       <TableView fx:id="tblOrders" layoutX="16.0" layoutY="256.0" prefHeight="121.0" prefWidth="610.0" stylesheets="@../css/Table.css">
          <columns>
-            <TableColumn fx:id="clmItemCode" prefWidth="75.0" text="Item Code" />
-            <TableColumn fx:id="clmDescription" prefWidth="135.33334350585938" text="Decsription" />
-            <TableColumn fx:id="clmHandOnStock" minWidth="0.0" prefWidth="144.0" text="HandOnStock" />
-            <TableColumn fx:id="clmQty" prefWidth="102.0" text="Qty" />
-            <TableColumn fx:id="clmPrice" prefWidth="62.0" text="Price" />
-            <TableColumn fx:id="clmtotal" prefWidth="88.0" text="Total" />
+            <TableColumn fx:id="clmItemCode" prefWidth="87.99996948242188" text="Item Code" />
+            <TableColumn fx:id="clmDescription" prefWidth="162.0" text="Decsription" />
+            <TableColumn fx:id="clmQty" prefWidth="89.3333740234375" text="Qty" />
+            <TableColumn fx:id="clmPrice" prefWidth="136.0" text="Price" />
+            <TableColumn fx:id="clmtotal" prefWidth="134.0" text="Total" />
          </columns>
       </TableView>
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="68.0" layoutX="16.0" layoutY="139.0" stroke="WHITE" strokeType="INSIDE" width="400.0" />

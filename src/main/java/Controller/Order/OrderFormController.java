@@ -47,26 +47,12 @@ public class OrderFormController implements Initializable {
     public TableView  tblOrders;
     public Label lblnettotal;
     public TableColumn clmtotal;
-    @FXML
-    private TableColumn<?, ?> clmCustname;
 
     @FXML
     private TableColumn<?, ?> clmDescription;
 
     @FXML
-    private TableColumn<?, ?> clmHandOnStock;
-
-    @FXML
-    private TableColumn<?, ?> clmOrderName;
-
-    @FXML
     private TableColumn<?, ?> clmQty;
-
-    @FXML
-    private TableColumn<?, ?> clmclmStockSalary2;
-
-    @FXML
-    private TableView<Customer> tblCustomer;
 
     @FXML
     private TextField txtAddress;
@@ -79,7 +65,6 @@ public class OrderFormController implements Initializable {
 
     @FXML
     void btnPlaceOrderAction(ActionEvent event) {
-
     }
 
     public void LodeTimeAndDate(){
@@ -150,14 +135,12 @@ public class OrderFormController implements Initializable {
 
         clmItemCode.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
         clmDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
-        clmHandOnStock.setCellValueFactory(new PropertyValueFactory<>("handOnStock"));
         clmQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
         clmPrice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
         clmtotal.setCellValueFactory(new PropertyValueFactory<>("total"));
 
-        String itemcode = cmbCustId.getValue();
+        String itemcode = cmbItemCode.getValue();
         String description =txtDescription.getText();
-        String handOnStock = txtHandOnStock.getText();
         Integer qty = Integer.parseInt(txtQty.getText());
         Double unitPrice = Double.parseDouble(txtUnitPrice.getText());
         Double total = unitPrice*qty;
@@ -165,7 +148,7 @@ public class OrderFormController implements Initializable {
         if (Integer.parseInt(txtHandOnStock.getText())<qty){
             new Alert(Alert.AlertType.WARNING,"OutOfStock").show();
         }else{
-            cartTms.add(new dto.CartTM(itemcode,description,handOnStock,qty,unitPrice,total));
+            cartTms.add(new dto.CartTM(itemcode,description,qty,unitPrice,total));
             calcNetTotal();
         }
 

@@ -12,7 +12,6 @@ import lombok.ToString;
 public class CartTM {
     private String itemCode;
     private String description;
-    private String handOnStock;
     private Integer qty;
     private Double unitPrice;
     private Double total;

@@ -49,6 +49,7 @@ public class LoginFormController {
                     Stage stage = new Stage();
                     stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashboard_form_controller.fxml"))));
                     stage.show();
+                    ((Stage) txtEmail.getScene().getWindow()).close();
                 } else {
                     new Alert(Alert.AlertType.ERROR,"Check your Password").show();
                     System.out.println("Check your password");
@@ -68,6 +69,7 @@ public class LoginFormController {
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Register_form.fxml"))));
             stage.show();
+            ((Stage) txtEmail.getScene().getWindow()).close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
