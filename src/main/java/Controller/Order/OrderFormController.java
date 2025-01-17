@@ -179,5 +179,12 @@ public class OrderFormController implements Initializable {
         lblnettotal.setText(total.toString()+"/=");
     }
 
-
+    public void btnCommitOnAction(ActionEvent actionEvent) {
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            connection.commit();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
