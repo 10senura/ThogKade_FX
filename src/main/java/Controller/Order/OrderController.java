@@ -13,6 +13,7 @@ import java.sql.SQLException;
 public class OrderController {
     public boolean placeOrder(Order order) throws SQLException {
         Connection connection = DBConnection.getInstance().getConnection();
+        connection.setAutoCommit(false);
         try {
             String SQL = "INSERT INTO orders VALUE(?,?,?)";
             connection.setAutoCommit(false);
