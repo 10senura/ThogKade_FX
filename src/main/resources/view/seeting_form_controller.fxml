@@ -9,6 +9,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -17,47 +20,68 @@
    <children>
       <AnchorPane prefHeight="410.0" prefWidth="622.0" style="-fx-background-color: #ffdced;">
          <children>
-            <TableView fx:id="tblItem" layoutX="361.0" layoutY="48.0" prefHeight="224.0" prefWidth="245.0" stylesheets="@../css/Table.css">
+            <TableView fx:id="tblUsers" layoutX="324.0" layoutY="55.0" prefHeight="224.0" prefWidth="283.0" stylesheets="@../css/Table.css">
                <columns>
-                  <TableColumn fx:id="clmCode" prefWidth="121.33333778381348" text="Name" />
-                  <TableColumn fx:id="clmDescription" prefWidth="124.66667175292969" text="Email" />
+                  <TableColumn fx:id="clmName" prefWidth="94.66668701171875" text="Name" />
+                  <TableColumn fx:id="clmEmail" prefWidth="187.33328247070312" text="Email" />
                </columns>
             </TableView>
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="341.0" layoutX="58.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="245.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="341.0" layoutX="42.0" layoutY="56.0" stroke="WHITE" strokeType="INSIDE" width="245.0" />
             <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="103.0" layoutX="362.0" layoutY="292.0" stroke="WHITE" strokeType="INSIDE" width="245.0" />
-            <JFXButton layoutX="372.0" layoutY="300.0" onAction="#btnAddItemOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #0097e6;" text="Add User" textFill="WHITE">
+            <JFXButton layoutX="372.0" layoutY="300.0" onAction="#btnAddUserOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #0097e6;" text="Add User" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="372.0" layoutY="349.0" onAction="#btnUpdateItemOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #44bd32;" text="Update User" textFill="WHITE">
+            <JFXButton layoutX="372.0" layoutY="349.0" onAction="#btnUpdateUserOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #44bd32;" text="Update User" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="489.0" layoutY="300.0" onAction="#btnSearchItemOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #8c7ae6;" text="Search User" textFill="WHITE">
+            <JFXButton layoutX="489.0" layoutY="300.0" onAction="#btnSearchUserOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #8c7ae6;" text="Search User" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="489.0" layoutY="349.0" onAction="#btnDeleteItemOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #c23616;" text="Delete User" textFill="WHITE">
+            <JFXButton layoutX="489.0" layoutY="349.0" onAction="#btnDeleteUserOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #c23616;" text="Delete User" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </JFXButton>
-            <TextField fx:id="txtname" layoutX="75.0" layoutY="49.0" prefHeight="27.0" prefWidth="207.0" promptText="id" />
-            <Label layoutX="75.0" layoutY="23.0" text="Id" />
-            <Label layoutX="75.0" layoutY="147.0" text="User Name" />
-            <TextField fx:id="txtemail" layoutX="75.0" layoutY="111.0" prefHeight="27.0" prefWidth="207.0" promptText="email" />
-            <Label layoutX="75.0" layoutY="85.0" text="email" />
-            <PasswordField fx:id="txtConformePassword" layoutX="75.0" layoutY="235.0" prefHeight="27.0" prefWidth="207.0" promptText="password" />
-            <Label layoutX="75.0" layoutY="208.0" text="Password" />
-            <TextField fx:id="txtemail1" layoutX="75.0" layoutY="174.0" prefHeight="27.0" prefWidth="207.0" promptText="name" />
-            <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="162.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="txtId" layoutX="59.0" layoutY="91.0" prefHeight="27.0" prefWidth="207.0" promptText="id" />
+            <Label layoutX="59.0" layoutY="65.0" text="Id" />
+            <Label layoutX="59.0" layoutY="189.0" text="User Name" />
+            <TextField fx:id="txtEmail" layoutX="59.0" layoutY="153.0" prefHeight="27.0" prefWidth="207.0" promptText="email" />
+            <Label layoutX="59.0" layoutY="127.0" text="email" />
+            <PasswordField fx:id="txtPassword" layoutX="59.0" layoutY="277.0" prefHeight="27.0" prefWidth="207.0" promptText="password" />
+            <Label layoutX="59.0" layoutY="250.0" text="Password" />
+            <TextField fx:id="txtName" layoutX="59.0" layoutY="216.0" prefHeight="27.0" prefWidth="207.0" promptText="name" />
+            <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="145.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/user.gif" />
                </image>
             </ImageView>
+            <Label layoutX="122.0" layoutY="13.0" text="Setting" underline="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
          </children>
       </AnchorPane>
    </children>

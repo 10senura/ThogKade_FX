@@ -12,6 +12,7 @@ import java.util.PrimitiveIterator;
 @NoArgsConstructor
 @ToString
 public class User {
+    private String Id;
     private String username;
     private String email;
     private String Password;

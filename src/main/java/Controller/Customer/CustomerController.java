@@ -110,7 +110,6 @@ public class CustomerController implements CustomerService {
                         resultSet.getString("Address"),
                         resultSet.getDouble("Salary")
                 );
-                System.out.println(customer);
                 CustomerObservableList.add(customer);
             }
             return CustomerObservableList;
