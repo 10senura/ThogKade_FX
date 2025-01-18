@@ -28,7 +28,7 @@
             </TableView>
             <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="341.0" layoutX="42.0" layoutY="56.0" stroke="WHITE" strokeType="INSIDE" width="245.0" />
             <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="103.0" layoutX="362.0" layoutY="292.0" stroke="WHITE" strokeType="INSIDE" width="245.0" />
-            <JFXButton layoutX="372.0" layoutY="300.0" onAction="#btnAddUserOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #0097e6;" text="Add User" textFill="WHITE">
+            <JFXButton layoutX="372.0" layoutY="300.0" onAction="#btnAddUserOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #0097e6;" text="    Add User" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>

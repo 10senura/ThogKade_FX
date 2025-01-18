@@ -74,7 +74,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblnettotal" layoutX="138.0" layoutY="382.0" text="Label">
+      <Label fx:id="lblnettotal" layoutX="138.0" layoutY="382.0" text="0.0/=">
          <font>
             <Font name="Berlin Sans FB" size="25.0" />
          </font>

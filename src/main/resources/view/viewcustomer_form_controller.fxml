@@ -37,7 +37,7 @@
             <Font name="System Bold" size="10.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="460.0" layoutY="66.0" onAction="#btnUpdateCustomerOnAction" prefHeight="33.0" prefWidth="140.0" style="-fx-background-color: #44bd32;" text="    UpdateCustomer" textFill="WHITE">
+      <JFXButton layoutX="460.0" layoutY="66.0" onAction="#btnUpdateCustomerOnAction" prefHeight="33.0" prefWidth="140.0" style="-fx-background-color: #44bd32;" text="     Update Customer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
