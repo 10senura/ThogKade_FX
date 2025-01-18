@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.User.SettingFormController">
+   <children>
+      <AnchorPane prefHeight="410.0" prefWidth="622.0" style="-fx-background-color: #ffdced;">
+         <children>
+            <TableView fx:id="tblItem" layoutX="361.0" layoutY="48.0" prefHeight="224.0" prefWidth="245.0" stylesheets="@../css/Table.css">
+               <columns>
+                  <TableColumn fx:id="clmCode" prefWidth="121.33333778381348" text="Name" />
+                  <TableColumn fx:id="clmDescription" prefWidth="124.66667175292969" text="Email" />
+               </columns>
+            </TableView>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="341.0" layoutX="58.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="245.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="103.0" layoutX="362.0" layoutY="292.0" stroke="WHITE" strokeType="INSIDE" width="245.0" />
+            <JFXButton layoutX="372.0" layoutY="300.0" onAction="#btnAddItemOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #0097e6;" text="Add User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="372.0" layoutY="349.0" onAction="#btnUpdateItemOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #44bd32;" text="Update User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="489.0" layoutY="300.0" onAction="#btnSearchItemOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #8c7ae6;" text="Search User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="489.0" layoutY="349.0" onAction="#btnDeleteItemOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #c23616;" text="Delete User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="txtname" layoutX="75.0" layoutY="49.0" prefHeight="27.0" prefWidth="207.0" promptText="id" />
+            <Label layoutX="75.0" layoutY="23.0" text="Id" />
+            <Label layoutX="75.0" layoutY="147.0" text="User Name" />
+            <TextField fx:id="txtemail" layoutX="75.0" layoutY="111.0" prefHeight="27.0" prefWidth="207.0" promptText="email" />
+            <Label layoutX="75.0" layoutY="85.0" text="email" />
+            <PasswordField fx:id="txtConformePassword" layoutX="75.0" layoutY="235.0" prefHeight="27.0" prefWidth="207.0" promptText="password" />
+            <Label layoutX="75.0" layoutY="208.0" text="Password" />
+            <TextField fx:id="txtemail1" layoutX="75.0" layoutY="174.0" prefHeight="27.0" prefWidth="207.0" promptText="name" />
+            <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="162.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/user.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

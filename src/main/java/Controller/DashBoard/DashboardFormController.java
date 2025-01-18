@@ -101,6 +101,12 @@ public class DashboardFormController implements Initializable {
         this.lodeFormController.getChildren().add(lode);
     }
 
-    public void btnSettingFormOnAction(ActionEvent actionEvent) {
+    public void btnSettingFormOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = this.getClass().getResource("/view/seeting_form_controller.fxml");
+
+        assert resource!=null;
+        Parent lode = FXMLLoader.load(resource);
+        this.lodeFormController.getChildren().clear();
+        this.lodeFormController.getChildren().add(lode);
     }
 }
