@@ -32,7 +32,7 @@ public class UserController implements UserService{
             pstm.setObject(1,user.getId());
             pstm.setObject(2,user.getUsername());
             pstm.setObject(3,user.getEmail());
-            pstm.setObject(3,user.getPassword());
+            pstm.setObject(4,user.getPassword());
             return pstm.executeUpdate()>0;
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR,"ERROR"+e.getMessage()).show();
@@ -49,7 +49,7 @@ public class UserController implements UserService{
             pstm.setObject(1,user.getId());
             pstm.setObject(2,user.getUsername());
             pstm.setObject(3,user.getEmail());
-            pstm.setObject(3,user.getPassword());
+            pstm.setObject(4,user.getPassword());
 
             return pstm.executeUpdate()> 0;
 

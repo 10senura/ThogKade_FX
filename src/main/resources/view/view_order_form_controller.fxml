@@ -69,21 +69,26 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXButton layoutX="236.0" layoutY="382.0" onAction="#btnCommitOnAction" prefHeight="33.0" prefWidth="131.0" style="-fx-background-color: #502779;" text="Commit" textFill="WHITE">
+      <JFXButton layoutX="348.0" layoutY="380.0" onAction="#btnCommitOnAction" prefHeight="33.0" prefWidth="131.0" style="-fx-background-color: #502779;" text="Commit" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblnettotal" layoutX="34.0" layoutY="382.0" text="Label">
+      <Label fx:id="lblnettotal" layoutX="138.0" layoutY="382.0" text="Label">
          <font>
             <Font name="Berlin Sans FB" size="25.0" />
          </font>
       </Label>
       <TextField fx:id="txtOrderId" layoutX="235.0" layoutY="217.0" prefHeight="30.0" prefWidth="109.0" promptText="Order ID" />
-      <JFXButton layoutX="377.0" layoutY="382.0" onAction="#btnPlaceOrderAction" prefHeight="33.0" prefWidth="131.0" style="-fx-background-color: #502779;" text="Place Order" textFill="WHITE">
+      <JFXButton layoutX="492.0" layoutY="379.0" onAction="#btnPlaceOrderAction" prefHeight="33.0" prefWidth="131.0" style="-fx-background-color: #502779;" text="Place Order" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
+      <Label fx:id="lblnettotal1" layoutX="14.0" layoutY="382.0" text="Net Total = " textFill="#600d72">
+         <font>
+            <Font name="Berlin Sans FB" size="25.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

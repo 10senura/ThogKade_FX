@@ -12,7 +12,7 @@ public interface UserService {
 
         boolean DeleteUser(String id);
 
-        User SearchUser(String username);
+        User SearchUser(String id);
 
         ObservableList<User> getAll();
 

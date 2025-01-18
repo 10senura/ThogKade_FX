@@ -70,16 +70,22 @@ public class OrderFormController implements Initializable {
 
 
     @FXML
-    void btnPlaceOrderAction(ActionEvent event) {
+    public void btnPlaceOrderAction(ActionEvent event) {
         String orderId = txtOrderId.getText();
         LocalDate orderDate = LocalDate.now();
         String customerId = cmbCustId.getValue();
 
         List<OrderDetail> orderDetails = new ArrayList<>();
+
         cartTms.forEach(obj->{
             orderDetails.add(new OrderDetail(orderId,obj.getItemCode(),obj.getQty(),0.0));
         });
         Order order = new Order(orderId, orderDate, customerId, orderDetails);
+        try {
+            new OrderController().placeOrder(order);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void LodeTimeAndDate(){
@@ -104,22 +110,18 @@ public class OrderFormController implements Initializable {
         loadCustomerIds();
         loadItemCodes();
 
-        cmbCustId.getSelectionModel().selectedItemProperty().addListener((observableValue, o, newValue) ->{
-            if (newValue!=null){
-                searchCustomer(newValue);
+        cmbCustId.getSelectionModel().selectedItemProperty().addListener((observableValue, s, newVal) -> {
+            if (newVal!=null){
+                searchCustomer(newVal);
             }
-        } );
-
-        cmbItemCode.getSelectionModel().selectedItemProperty().addListener((observableValue, o, t1) ->{
-            if (t1!=null){
-                SearchItem(t1);
-            }
-
         });
-
-        calcNetTotal();
-
+        cmbItemCode.getSelectionModel().selectedItemProperty().addListener((observableValue, s, newVal) -> {
+            if (newVal!=null){
+                SearchItem(newVal);
+            }
+        });
     }
+
 
     public void loadCustomerIds(){
         cmbCustId.setItems(CustomerController.getInstance().getCustomerId());
@@ -140,7 +142,6 @@ public class OrderFormController implements Initializable {
         txtDescription.setText(item.getDescription());
         txtHandOnStock.setText(String.valueOf(item.getQtyOnHand()));
         txtUnitPrice.setText(String.valueOf(item.getPrice()));
-
     }
 
     ObservableList<dto.CartTM> cartTms = FXCollections.observableArrayList();
@@ -187,4 +188,6 @@ public class OrderFormController implements Initializable {
             throw new RuntimeException(e);
         }
     }
+
+
 }

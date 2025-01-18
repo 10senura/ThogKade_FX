@@ -4,6 +4,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="416.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashBoard.DashBoardCloneForm">
@@ -15,17 +16,20 @@
                   <Image url="@../img/store.png" />
                </image>
             </ImageView>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#502779" height="89.0" layoutX="212.0" layoutY="110.0" stroke="#502779" strokeType="INSIDE" width="73.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#502779" height="89.0" layoutX="404.0" layoutY="110.0" stroke="#502779" strokeType="INSIDE" width="73.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#502779" height="89.0" layoutX="308.0" layoutY="110.0" stroke="#502779" strokeType="INSIDE" width="73.0" />
             <Label fx:id="lblOrders" contentDisplay="CENTER" layoutX="407.0" layoutY="112.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="     Orders" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lblCustomer" contentDisplay="CENTER" layoutX="216.0" layoutY="112.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text=" Customers" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+            <Label fx:id="lblCustomer" contentDisplay="CENTER" layoutX="216.0" layoutY="113.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text=" Customers" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lblItem" contentDisplay="CENTER" layoutX="311.0" layoutY="111.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="      Items" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+            <Label fx:id="lblItem" contentDisplay="CENTER" layoutX="311.0" layoutY="112.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="      Items" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -65,6 +69,21 @@
                   <Image url="@../img/icon-item.png" />
                </image>
             </ImageView>
+            <Label layoutX="219.0" layoutY="162.0" text="Customers" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="329.0" layoutY="162.0" text="Items" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="421.0" layoutY="162.0" text="Orders" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

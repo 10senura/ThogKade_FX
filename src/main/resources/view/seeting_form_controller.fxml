@@ -33,7 +33,7 @@
                   <Font name="System Bold" size="10.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="372.0" layoutY="349.0" onAction="#btnUpdateUserOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #44bd32;" text="Update User" textFill="WHITE">
+            <JFXButton layoutX="372.0" layoutY="349.0" onAction="#btnUpdateUserOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #44bd32;" text="      Update User" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
@@ -42,11 +42,25 @@
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon-search-.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </JFXButton>
             <JFXButton layoutX="489.0" layoutY="349.0" onAction="#btnDeleteUserOnAction" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #c23616;" text="Delete User" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon-delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </JFXButton>
             <TextField fx:id="txtId" layoutX="59.0" layoutY="91.0" prefHeight="27.0" prefWidth="207.0" promptText="id" />
             <Label layoutX="59.0" layoutY="65.0" text="Id" />
@@ -82,6 +96,16 @@
                   </LinearGradient>
                </textFill>
             </Label>
+            <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="381.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon-add-.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="380.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon-update-.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

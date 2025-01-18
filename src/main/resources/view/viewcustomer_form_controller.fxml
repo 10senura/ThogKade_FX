@@ -31,23 +31,23 @@
       <TextField fx:id="txtAddress" layoutX="207.0" layoutY="144.0" prefHeight="25.0" prefWidth="169.0" promptText="Address" />
       <TextField fx:id="txtName" layoutX="207.0" layoutY="101.0" prefHeight="25.0" prefWidth="169.0" promptText="Name" />
       <TextField fx:id="txtSalary" layoutX="207.0" layoutY="186.0" prefHeight="25.0" prefWidth="169.0" promptText="Salary" />
-      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="145.0" layoutX="409.0" layoutY="71.0" stroke="WHITE" strokeType="INSIDE" width="212.0" />
-      <JFXButton layoutX="419.0" layoutY="85.0" onAction="#btnAddCustomerOnAction" prefHeight="49.0" prefWidth="93.0" style="-fx-background-color: #0097e6;" text="Add Customer" textFill="WHITE">
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="206.0" layoutX="428.0" layoutY="10.0" stroke="WHITE" strokeType="INSIDE" width="202.0" />
+      <JFXButton layoutX="460.0" layoutY="25.0" onAction="#btnAddCustomerOnAction" prefHeight="33.0" prefWidth="140.0" style="-fx-background-color: #0097e6;" text="Add Customer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="518.0" layoutY="85.0" onAction="#btnUpdateCustomerOnAction" prefHeight="49.0" prefWidth="93.0" style="-fx-background-color: #44bd32;" text="UpdateCustomer" textFill="WHITE">
+      <JFXButton layoutX="460.0" layoutY="66.0" onAction="#btnUpdateCustomerOnAction" prefHeight="33.0" prefWidth="140.0" style="-fx-background-color: #44bd32;" text="    UpdateCustomer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="419.0" layoutY="153.0" onAction="#btnSearchCustomerOnAction" prefHeight="49.0" prefWidth="93.0" style="-fx-background-color: #8c7ae6;" text="Search Customer" textFill="WHITE">
+      <JFXButton layoutX="460.0" layoutY="115.0" onAction="#btnSearchCustomerOnAction" prefHeight="33.0" prefWidth="140.0" style="-fx-background-color: #8c7ae6;" text="    Search Customer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="518.0" layoutY="153.0" onAction="#btnDeleteCustomerOnAction" prefHeight="49.0" prefWidth="93.0" style="-fx-background-color: #c23616;" text="Delete Customer" textFill="WHITE">
+      <JFXButton layoutX="460.0" layoutY="157.0" onAction="#btnDeleteCustomerOnAction" prefHeight="33.0" prefWidth="140.0" style="-fx-background-color: #c23616;" text="       Delete Customer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
@@ -55,6 +55,26 @@
       <ImageView fitHeight="210.0" fitWidth="169.0" layoutX="14.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/Customer.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="474.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icon-add-.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="19.0" fitWidth="18.0" layoutX="477.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icon-update-.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="473.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icon-search-.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="474.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icon-delete.png" />
          </image>
       </ImageView>
    </children>

@@ -40,6 +40,7 @@ public class LoginFormController {
             resultSet.next();
             User user = new User(resultSet.getString(2),
                     resultSet.getString(3),
+                    resultSet.getString(4),
                     resultSet.getString(4)
             );
             System.out.println(user);
