@@ -113,7 +113,6 @@ public class ItemController implements ItemService{
                         resultSet.getDouble("unitPrice"),
                         resultSet.getInt("qtyOnHand")
                 );
-                System.out.println(item);
                 CustomerObservableList.add(item);
             }
             return CustomerObservableList;

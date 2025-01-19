@@ -106,7 +106,6 @@ public class SettingFormController implements Initializable {
             new Alert(Alert.AlertType.INFORMATION,"Update Successfully !");
         }else{
             new Alert(Alert.AlertType.ERROR,"Update NOT Successfully !");
-
         }
         lodetabel();
     }
