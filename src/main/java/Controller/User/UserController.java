@@ -1,7 +1,5 @@
 package Controller.User;
 
-import Controller.Customer.CustomerController;
-import Model.Customer;
 import Model.User;
 import db.DBConnection;
 import javafx.collections.FXCollections;
