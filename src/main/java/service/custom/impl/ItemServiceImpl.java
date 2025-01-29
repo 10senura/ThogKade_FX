@@ -1,13 +1,13 @@
-package Controller.Item;
+package service.custom.impl;
 
 import Controller.util.CrudUtil;
-import Model.Customer;
 import Model.Item;
 import Model.OrderDetail;
 import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import service.custom.ItemService;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,12 +15,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ItemController implements ItemService{
-    private static ItemController instance;
-    private ItemController(){}
+public class ItemServiceImpl implements ItemService {
+    private static ItemServiceImpl instance;
+    public ItemServiceImpl(){}
 
-    public static ItemController getInstance() {
-        return instance==null?instance=new ItemController():instance;
+    public static ItemServiceImpl getInstance() {
+        return instance==null?instance=new ItemServiceImpl():instance;
     }
 
     @Override

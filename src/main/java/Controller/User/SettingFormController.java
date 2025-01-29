@@ -1,8 +1,5 @@
 package Controller.User;
 
-import Controller.Customer.CustomerController;
-import Controller.Customer.CustomerService;
-import Model.Customer;
 import Model.User;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import service.custom.UserService;
+import service.custom.impl.UserController;
 
 import java.net.URL;
 import java.util.ResourceBundle;

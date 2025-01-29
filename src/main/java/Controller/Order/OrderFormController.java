@@ -1,8 +1,6 @@
 package Controller.Order;
 
-import Controller.Customer.CustomerController;
-import Controller.Customer.CustomerService;
-import Controller.Item.ItemController;
+import service.custom.CustomerService;
 import Model.Customer;
 import Model.Item;
 import Model.Order;
@@ -20,11 +18,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
+import service.custom.impl.CustomerServiceImpl;
+import service.custom.impl.ItemServiceImpl;
+import service.custom.impl.OrderController;
 
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -36,8 +35,6 @@ import java.util.ResourceBundle;
 
 public class OrderFormController implements Initializable {
 
-    public TableColumn clmAddress;
-    public TableColumn clmStock;
     public TableColumn clmPrice;
     public TextField txtDescription;
     public TextField txtUnitPrice;
@@ -66,7 +63,7 @@ public class OrderFormController implements Initializable {
     @FXML
     private TextField txtName;
 
-    CustomerService Service= CustomerController.getInstance();
+    CustomerService Service= CustomerServiceImpl.getInstance();
 
 
     @FXML
@@ -124,21 +121,21 @@ public class OrderFormController implements Initializable {
 
 
     public void loadCustomerIds(){
-        cmbCustId.setItems(CustomerController.getInstance().getCustomerId());
+        cmbCustId.setItems(CustomerServiceImpl.getInstance().getCustomerId());
     }
 
     public void loadItemCodes(){
-        cmbItemCode.setItems(ItemController.getInstance().getItemId());
+        cmbItemCode.setItems(CustomerServiceImpl.getInstance().getCustomerId());
     }
 
     private void searchCustomer(String customerId){
-        Customer customer = CustomerController.getInstance().SearchCustomer(customerId);
+        Customer customer = CustomerServiceImpl.getInstance().SearchCustomer(customerId);
         txtName.setText(customer.getName());
         txtAddress.setText(customer.getAddress());
     }
 
     private void SearchItem(String itemcode){
-        Item item = ItemController.getInstance().SearchItem(itemcode);
+        Item item = ItemServiceImpl.getInstance().SearchItem(itemcode);
         txtDescription.setText(item.getDescription());
         txtHandOnStock.setText(String.valueOf(item.getQtyOnHand()));
         txtUnitPrice.setText(String.valueOf(item.getPrice()));

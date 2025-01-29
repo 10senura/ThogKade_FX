@@ -1,24 +1,25 @@
-package Controller.Customer;
+package service.custom.impl;
 
 import Model.Customer;
 import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import service.custom.CustomerService;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class CustomerController implements CustomerService {
+public class CustomerServiceImpl implements CustomerService {
 
-   private static CustomerController instance;
+   private static CustomerServiceImpl instance;
 
-    private CustomerController(){}
+    private CustomerServiceImpl(){}
 
-    public static CustomerController getInstance() {
-        return instance==null?instance= new  CustomerController():instance;
+    public static CustomerServiceImpl getInstance() {
+        return instance==null?instance= new  CustomerServiceImpl():instance;
     }
 
     @Override

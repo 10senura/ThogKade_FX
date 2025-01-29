@@ -1,17 +1,18 @@
-package Controller.User;
+package service.custom.impl;
 
 import Model.User;
 import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import service.custom.UserService;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserController implements UserService{
+public class UserController implements UserService {
 
     private static UserController instance;
 

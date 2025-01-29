@@ -1,7 +1,7 @@
 package Controller.Customer;
 
+import Controller.util.ServiceType;
 import Model.Customer;
-import Model.Item;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,6 +11,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import service.ServiceFactory;
+import service.custom.CustomerService;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -35,7 +37,7 @@ public class ViewCustomerFormController implements Initializable {
     @FXML
     private TableColumn clmName;
 
-    CustomerService Service= CustomerController.getInstance();
+    CustomerService Service = ServiceFactory.getInsterns().getServiceType(ServiceType.CUSTOMER);
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

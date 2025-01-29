@@ -1,9 +1,10 @@
-package Controller.Customer;
+package service.custom;
 
 import Model.Customer;
 import javafx.collections.ObservableList;
+import service.SuperService;
 
-public interface CustomerService {
+public interface CustomerService extends SuperService {
 
      boolean AddCustomer(Customer customer);
 

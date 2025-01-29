@@ -1,6 +1,5 @@
-package Controller.User;
+package service.custom;
 
-import Model.Customer;
 import Model.User;
 import javafx.collections.ObservableList;
 

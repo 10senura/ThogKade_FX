@@ -1,5 +1,6 @@
 package Controller.Item;
 
+import Controller.util.ServiceType;
 import Model.Item;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,6 +12,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lombok.ToString;
+import service.ServiceFactory;
+import service.custom.ItemService;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -45,7 +48,7 @@ public class ItemFormController implements Initializable {
     @FXML
     private TextField txtQty;
 
-    ItemService Service= ItemController.getInstance();
+    ItemService Service = ServiceFactory.getInsterns().getServiceType(ServiceType.ITEM);
 
     @FXML
     void btnAddItemOnAction(ActionEvent event) {
