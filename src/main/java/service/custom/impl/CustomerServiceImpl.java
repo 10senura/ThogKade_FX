@@ -128,4 +128,13 @@ public class CustomerServiceImpl implements CustomerService {
     });
     return customerIds;
     }
+    
+    public ObservableList<String> getCustomerName(){
+        ObservableList<String> customerIds = FXCollections.observableArrayList();
+        ObservableList<Customer> customerObservableList = getAll();
+        customerObservableList.forEach(customer ->{
+                customerIds.add(customer.getId());
+    });
+    return customerIds;
+    }
 }
